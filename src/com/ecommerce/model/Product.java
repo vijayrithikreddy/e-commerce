@@ -7,11 +7,10 @@ public class Product {
     private String name;
     private int maxRetailPrice;
     private float discountPercentage;
-    private int rating;
     private boolean isAvailable;
-
-    public Product() {
-    }
+    private String company;
+    private String category;
+    private int manufacturedYear;
 
     public int getId() {
         return id;
@@ -49,14 +48,6 @@ public class Product {
         return this;
     }
 
-    public int getRating() {
-        return rating;
-    }
-
-    public Product setRating(int rating) {
-        this.rating = rating;
-        return this;
-    }
 
     public boolean isAvailable() {
         return isAvailable;
@@ -65,6 +56,33 @@ public class Product {
     public Product setAvailable(boolean available) {
         isAvailable = available;
         return this;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public Product setCompany(String company) {
+        this.company = company;
+        return this;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", maxRetailPrice=" + maxRetailPrice +
+                ", discountPercentage=" + discountPercentage +
+                ", isAvailable=" + isAvailable +
+                ", company='" + company + '\'' +
+                ", category='" + category + '\'' +
+                ", manufacturedYear=" + manufacturedYear +
+                '}';
     }
 
     @Override
@@ -79,15 +97,17 @@ public class Product {
         return Objects.hashCode(id);
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", maxRetailPrice=" + maxRetailPrice +
-                ", discountPercentage=" + discountPercentage +
-                ", rating=" + rating +
-                ", isAvailable=" + isAvailable +
-                '}';
+    public Product setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+
+    public int getManufacturedYear() {
+        return manufacturedYear;
+    }
+
+    public Product setManufacturedYear(int manufacturedYear) {
+        this.manufacturedYear = manufacturedYear;
+        return this;
     }
 }

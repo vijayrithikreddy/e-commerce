@@ -15,7 +15,12 @@ public class Main {
             for (String product : productService.getProductNames())
                 System.out.println(product);
             System.out.println(productService.getCountOfProducts());
-            System.out.println(productService.existsByCompany("Sony"));
+            System.out.println(productService.getUniqueProductsByCategory());
+            System.out.println(productService.getProductsAfterYear(2000));
+            System.out.println(productService.getExpensiveProducts(10));
+            System.out.println(productService.getTotalProductsValue());
+            System.out.println(productService.getTotalProductsDiscountedValue());
+            System.out.println(productService.groupByCategory());
         }catch (Exception e){
             System.out.println(e.getMessage());
         }

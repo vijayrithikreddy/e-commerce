@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Product {
     private int id;
     private String name;
-    private int maxRetailPrice;
+    private double maxRetailPrice;
     private float discountPercentage;
     private boolean isAvailable;
     private String company;
@@ -30,11 +30,11 @@ public class Product {
         return this;
     }
 
-    public int getMaxRetailPrice() {
+    public double getMaxRetailPrice() {
         return maxRetailPrice;
     }
 
-    public Product setMaxRetailPrice(int maxRetailPrice) {
+    public Product setMaxRetailPrice(double maxRetailPrice) {
         this.maxRetailPrice = maxRetailPrice;
         return this;
     }
